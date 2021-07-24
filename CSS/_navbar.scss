@@ -1,0 +1,105 @@
+nav {
+  position: absolute;
+  z-index: 2;
+  //   padding: 1.5rem 0;
+  height: 10vh;
+  // background-color: rgb(209, 32, 32);
+  width: 100%;
+  ul {
+    margin-left: auto;
+    // border: 2px solid rgb(218, 161, 196);
+    @media (max-width: 768px) {
+      background: $white;
+      margin-left: auto;
+      position: absolute;
+      top: -100vh;
+      display: flex;
+      flex-direction: column;
+      right: 0;
+      height: 50vh;
+      padding-left: 1rem;
+      justify-content: space-around;
+      transition: all 1s ease;
+    }
+    li {
+      //   background: rgb(144, 144, 226);
+      // display: inline-block;
+      & + li {
+        margin-left: 2vw;
+      }
+      a {
+        color: $white;
+        font-size: 0.8rem;
+        @media (min-width: 1065px) {
+          color: $txt_clr_primary;
+        }
+      }
+    }
+  }
+}
+.nav_icons {
+  margin-left: 4vw;
+  + .nav_icons {
+    a {
+      position: relative;
+      &::before {
+        position: absolute;
+        content: "2";
+        background-image: url(images/Ellipse.png);
+        color: $txt_clr_primary;
+        text-align: center;
+        right: 5px;
+        top: 3px;
+        /* z-index: 2; */
+        height: 25px;
+        width: 25px;
+        background-size: 25px 25px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.3em;
+        background-repeat: no-repeat;
+      }
+    }
+    @media (max-width: 1064px) {
+      img {
+        filter: invert(1);
+      }
+    }
+  }
+}
+#check {
+  display: none;
+  &:checked ~ ul {
+    top: 10vh;
+  }
+}
+.burger {
+  display: none;
+  @media (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0;
+  }
+  div {
+    width: 25px;
+    height: 3px;
+    background-color: $white;
+    margin: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+}
+/* toggle */
+/* cross animation on toggle */
+#check:checked ~ .burger .line1 {
+  transform: rotate(-45deg) translate(-4px, 6px);
+}
+#check:checked ~ .burger .line2 {
+  opacity: 0;
+}
+#check:checked ~ .burger .line3 {
+  transform: rotate(45deg) translate(-4px, -6px);
+}
