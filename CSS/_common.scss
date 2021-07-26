@@ -1,0 +1,77 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+  font-size: 14px;
+  @media (min-width: 768px) {
+    font-size: 16px;
+  }
+}
+.d_flex {
+  display: flex;
+}
+.align-items-center {
+  align-items: center;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+.justify-content-end {
+  justify-content: flex-end;
+}
+.pos_abs {
+  position: absolute;
+}
+body {
+  font-family: "sailecregular", sans-serif;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+a {
+  text-decoration: none;
+}
+ul {
+  list-style: none;
+}
+h1 {
+  font-weight: 500;
+  font-size: 2.5rem;
+  line-height: 1.5;
+  color: #151442;
+  font-family: "sailecbold", sans-serif;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  // background-color: #4dfd47;
+  // outline: 5px solid rgb(9, 247, 21);
+}
+.txt_center {
+  text-align: center;
+}
+.btn {
+  border-radius: 48px;
+  font-size: 0.8rem;
+  padding: 0.8em 1.5em;
+  display: inline-block;
+}
+.my-1 {
+  margin: 1rem 0;
+}
+
+.w-100{
+  width: 100%
+}
+
+.h-100{
+  height: 100%
+}

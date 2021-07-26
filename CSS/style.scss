@@ -1,0 +1,312 @@
+@import "fonts";
+@import "var";
+@import "common";
+@import "navbar_new";
+@import "intro";
+
+// skin care products
+.products {
+  // border : 2px solid green;
+  margin: 7rem 0 7rem 0;
+  padding: 5rem 2.5rem;
+  @media(max-width: 991px){
+    // border: 2px solid blue;
+    margin: 10rem 0 10rem 0;
+  }
+}
+.prod_title {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+  h1 {
+    // background-color: green;
+    line-height: 1.5;
+    margin-top: 1rem;
+    @media (min-width: 768px) {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+  a {
+    float: none;
+    @media (min-width: 768px) {
+      float: right;
+    }
+  }
+  .btn {
+    border: 1px solid #102421;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1rem;
+    width: 10rem;
+    margin: 1em auto;
+    // margin-top: 1em;
+    color: $txt_clr_primary;
+    @media (min-width: 768px) {
+      // width: 100%;
+      margin: 1em 0.5px 1em auto;
+    }
+  }
+}
+.product_images {
+  text-align: center;
+  @media (min-width: 576px) {
+    display: flex;
+    flex-wrap: wrap;
+    // gap: .5rem;
+  }
+}
+figure {
+  height: 60vh;
+  // border    : 2px solid;
+  flex-basis: 50%;
+  padding: 1em 2.3em;
+  @media (min-width: 768px) {
+    flex-basis: 25%;
+    flex-shrink: 0;
+  }
+  img {
+    margin: 0 auto;
+    height: 50%;
+  }
+}
+.prod_name {
+  font-weight: 500;
+  font-size: 2rem;
+  color: $txt_clr_primary;
+  margin-top: 1.5rem;
+}
+.prod_price {
+  font-size: 0.8rem;
+  line-height: 4;
+  color: #8f9095;
+}
+.prod_desc {
+  font-weight: 500;
+  // font-size: 16px;
+  line-height: 149.5%;
+  color: #8f9095;
+}
+
+// testimonials
+.testimonials {
+  background: url(../images/testimonial_bg.jpg) center no-repeat;
+  background-size: cover;
+  background-color: rgba(29, 29, 29, 0.46);
+  background-blend-mode: multiply;
+  padding: 4rem 0;
+  height: 100%;
+  @media (min-width: 768px) {
+    padding: 8rem 0;
+  }
+  h1 {
+    margin-top: 5rem;
+    font-weight: 500;
+    font-size: 3rem;
+    line-height: 120.5%;
+    text-align: center;
+    color: #fff;
+    @media (min-width: 768px) {
+      text-align: left;
+      // font-size  : 4rem;
+    }
+    /* or 96px */
+  }
+  .d_flex {
+    &:nth-child(1) {
+      height: 100%;
+      flex-direction: column;
+      @media (min-width: 768px) {
+        flex-direction: row;
+      }
+    }
+  }
+}
+.client_title {
+  color: #fff;
+  flex-basis: 40%;
+  p {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 168%;
+    text-align: center;
+    margin-bottom: 1em;
+    text-decoration: underline;
+    @media (min-width: 768px) {
+      text-align: left;
+      margin-top: 3em;
+      margin-bottom: 0
+    }
+  }
+}
+.client_quote {
+  // width              : 32rem;
+  // height             : 28rem;
+  align-self: center;
+  padding: 5rem;
+  background: #fff3f3;
+  position: relative;
+  flex-basis: 40%;
+  &::before,
+  &::after {
+    position: absolute;
+    content: "";
+    display: inline-block;
+    width: 30px;
+    height: 25px;
+    background-size: 30px 25px;
+    background-repeat: no-repeat;
+  }
+  &::before {
+    background-image: url(../images/quote-open.svg);
+    top: 9%;
+    left: 9%;
+  }
+  &:after {
+    background-image: url(../images/quote-close.svg);
+    right: 9%;
+  }
+  h2 {
+    color: #342b42;
+    font-size: 2rem;
+    line-height: 1.5;
+  }
+  sub {
+    // position: absolute;
+    color: #454545;
+    font-weight: 500;
+    font-size: 1rem;
+    // right: 5rem;
+    // bottom: 5rem;
+    justify-content: flex-end;
+
+    span {
+      font-size: 0.8rem;
+    }
+  }
+}
+.vitamins {
+  .btn {
+    background-color: $bg_primary;
+    color: $white !important;
+    img {
+      filter: invert(1);
+    }
+  }
+}
+.swiper-wrapper {
+  gap: 2em;
+  margin-bottom: 3rem;
+}
+.swiper-container-horizontal > .swiper-scrollbar {
+  height: 2px;
+  width: 98%;
+}
+.benefits {
+  padding: 2rem 0;
+  // border: 2px solid;
+  align-items: center;
+  @media (min-width: 768px) {
+    height: 90vh;
+  }
+  .d_flex {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
+  h1 {
+    margin-bottom: 2rem;
+  }
+  img {
+    height: 25%;
+  }
+  figure {
+    padding: 1em 2em;
+    height: auto;
+    margin: auto 0;
+  }
+  .prod_name {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+}
+
+
+footer {
+  position: relative;
+  #topBtn{
+    // position: absolute;
+    // top: -8rem;
+    // right: 0;
+    margin-left: auto;
+    @media (min-width: 768px) {
+      position: absolute;
+      top: -6rem;
+      right: 0;
+    }
+    
+  }
+  padding: 2rem 0;
+  background: #0f2421;
+  text-align: center;
+  color: $white;
+  @media (min-width: 768px) {
+    text-align: left;
+    height: 100vh;
+  }
+  .mob_hidden {
+    display: none;
+
+    @media (min-width: 768px) {
+      display: block;
+    }
+  }
+  .mob_visible{
+    display: block;
+    @media (min-width: 768px) {
+      display: none;
+    }
+  }
+  h1 {
+    color: $white;
+    margin: 1.5rem 0;
+    font-size: 3rem;
+    // border: 2px solid;
+  }
+  h3 {
+    margin: 2rem 0;
+    @media (min-width: 768px) {
+      margin-top: 0;
+    }
+  }
+  li {
+    line-height: 1.3;
+    & + li {
+      margin-top: 1em;
+    }
+  }
+  a {
+    color: $white;
+  }
+  address {
+    line-height: 1.5;
+    // margin-bottom: 3rem;
+  }
+}
+@media (min-width: 768px) {
+  .foot_txt {
+    float: left;
+  }
+}
+.foot_links {
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    float: right;
+    width: 40%;
+  }
+}
